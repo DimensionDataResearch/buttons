@@ -51,14 +51,9 @@ coffee =
       javascript = callback
       callback = null
 
-    console.log "\u001B[36;1m==>\u001B[0;1m cat #{coffeescripts.join " "} | coffee --compile > #{javascript}\u001B[0m"
+    console.log "\u001B[36;1m==>\u001B[0;1m coffee --join #{javascript} --compile #{coffeescripts.join " "} \u001B[0m"
 
-    spawn "cat", coffeescripts, stdio: ['ignore', 'pipe', process.stderr]
-      .on 'exit', (status) -> process.exit status unless status is 0
-      .on 'close', -> stdin.end()
-      .stdout.on 'data', (data) -> stdin.write data
-
-    stdin = spawn "coffee", ["--compile"], stdio: ['pipe', fs.openSync(javascript, 'w'), process.stderr]
+    spawn "coffee", ["--join", javascript ,"--compile", coffeescripts]
       .on 'exit', (status) ->
         process.exit status unless status is 0
         callback() if callback
