@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>github:buttons</title>
+    <title>dimension data cloud:buttons</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="components/octicons/octicons/octicons.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <meta name="author" content="なつき">
-    <meta name="description" content="The unofficial GitHub Buttons made for developers.">
+    <meta name="description" content="Buttons for deploying to Dimension Data Cloud">
     <meta name="keywords" content="GitHub, Developer, Button, Follow, Star, Fork, Issue, Gist, Octicon, API">
     <script async defer src="buttons.js"></script>
     <script async defer src="assets/js/main.js"></script>
@@ -16,9 +16,11 @@
   <body>
     <header class="header">
       <div class="container">
-        <h1 class="pull-left"><span class="octicon octicon-logo-github" aria-label="GitHub"><!-- The Unofficial GitHub --></span><span class="logo-colon">:</span><span class="logo-buttons">buttons</span></h1>
+        <h1 class="pull-left">
+          <span><img class="logo-img" src="assets/img/dimensiondata.png" /></span>
+          <span class="logo-colon">:</span><span class="logo-buttons">buttons</span></h1>
         <nav class="pull-right">
-          <a href="https://github.com/ntkme/github-buttons"><span class="hidden-xs"> View on GitHub </span><span class="octicon octicon-mark-github" aria-hidden="true"></span></a>
+          <a href="https://github.com/dimensiondataresearch/buttons"><span class="hidden-xs"> View on GitHub </span><span class="octicon octicon-mark-github" aria-hidden="true"></span></a>
         </nav>
       </div>
     </header>
@@ -32,72 +34,12 @@
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
               <label class="radio-inline">
                 <input type="radio" name="type" value="follow">
-                <span> Follow </span><br>
+                <span> Deploy to Dimension Data Cloud </span><br>
                 <span class="hidden-lg">
-                  <a class="github-button" href="https://github.com/ntkme" data-style="mega" aria-label="Follow @ntkme on GitHub" data-text="Follow"></a>
+                  <a class="github-button" href="https://github.com/ntkme" data-style="mega" aria-label="Deploy to Dimension Data Cloud" data-text="Deploy to Dimension Data Cloud"></a>
                 </span>
                 <span class="visible-lg-inline">
-                  <a class="github-button" href="https://github.com/ntkme" aria-label="Follow @ntkme on GitHub" data-text="Follow"></a>
-                </span>
-              </label>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
-              <label class="radio-inline">
-                <input type="radio" name="type" value="watch">
-                <span> Watch </span><br>
-                <span class="hidden-lg">
-                  <a class="github-button" href="https://github.com/ntkme/github-buttons" data-icon="octicon-eye" data-style="mega" aria-label="Watch ntkme/github-buttons on GitHub" data-text="Watch"></a>
-                </span>
-                <span class="visible-lg-inline">
-                  <a class="github-button" href="https://github.com/ntkme/github-buttons" data-icon="octicon-eye" aria-label="Watch ntkme/github-buttons on GitHub" data-text="Watch"></a>
-                </span>
-              </label>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
-              <label class="radio-inline">
-                <input type="radio" name="type" value="star">
-                <span> Star </span><br>
-                <span class="hidden-lg">
-                  <a class="github-button" href="https://github.com/ntkme/github-buttons" data-icon="octicon-star" data-style="mega" aria-label="Star ntkme/github-buttons on GitHub" data-text="Star"></a>
-                </span>
-                <span class="visible-lg-inline">
-                  <a class="github-button" href="https://github.com/ntkme/github-buttons" data-icon="octicon-star" aria-label="Star ntkme/github-buttons on GitHub" data-text="Star"></a>
-                </span>
-              </label>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
-              <label class="radio-inline">
-                <input type="radio" name="type" value="fork">
-                <span> Fork </span><br>
-                <span class="hidden-lg">
-                  <a class="github-button" href="https://github.com/ntkme/github-buttons/fork" data-icon="octicon-repo-forked" data-style="mega" aria-label="Fork ntkme/github-buttons on GitHub" data-text="Fork"></a>
-                </span>
-                <span class="visible-lg-inline">
-                  <a class="github-button" href="https://github.com/ntkme/github-buttons/fork" data-icon="octicon-repo-forked" aria-label="Fork ntkme/github-buttons on GitHub" data-text="Fork"></a>
-                </span>
-              </label>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
-              <label class="radio-inline">
-                <input type="radio" name="type" value="issue">
-                <span> Issue </span><br>
-                <span class="hidden-lg">
-                  <a class="github-button" href="https://github.com/ntkme/github-buttons/issues" data-icon="octicon-issue-opened" data-style="mega" aria-label="Issue ntkme/github-buttons on GitHub" data-text="Issue"></a>
-                </span>
-                <span class="visible-lg-inline">
-                  <a class="github-button" href="https://github.com/ntkme/github-buttons/issues" data-icon="octicon-issue-opened" aria-label="Issue ntkme/github-buttons on GitHub" data-text="Issue"></a>
-                </span>
-              </label>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
-              <label class="radio-inline">
-                <input type="radio" name="type" value="download">
-                <span> Download </span><br>
-                <span class="hidden-lg">
-                  <a class="github-button" href="https://github.com/ntkme/github-buttons/archive/master.zip" data-icon="octicon-cloud-download" data-style="mega" aria-label="Download ntkme/github-buttons on GitHub" data-text="Download"></a>
-                </span>
-                <span class="visible-lg-inline">
-                  <a class="github-button" href="https://github.com/ntkme/github-buttons/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download ntkme/github-buttons on GitHub" data-text="Download"></a>
+                  <a class="github-button" href="https://github.com/ntkme"  aria-label="Deploy to Dimension Data Cloud" data-text="Deploy to Dimension Data Cloud"></a>
                 </span>
               </label>
             </div>
