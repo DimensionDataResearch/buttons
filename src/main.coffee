@@ -186,19 +186,15 @@ class ButtonForm extends Form
     config =
       className: "dimensiondata-button"
       href:
-        switch type
-          when "deploy"
-            "https://github.com/#{user}/#{repo}"
+        "https://github.com/#{user}/#{repo}"
       text:
-        switch type
-          "Deploy to Dimension Data Cloud"
+        "Deploy to Dimension Data Cloud"
       data:
         icon:
           "octicon-cloud-upload"
       aria:
         label:
-          switch type
-            "Dimension Data Cloud"
+          "Dimension Data Cloud"
     if options["large-button"]?
       config.data.style = "mega"
     if options["show-count"]?
