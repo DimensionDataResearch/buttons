@@ -120,7 +120,7 @@ class ButtonForm extends Form
     snippet.$.value = \
       """
       <!-- Place this tag in your head or just before your close body tag. -->
-      <script async defer src="https://buttons.github.io/buttons.js"></script>
+      <script async defer src="https://dimensiondataresearch.github.io/buttons/buttons.js"></script>
       """
 
     callback = ({force}) =>
@@ -144,8 +144,8 @@ class ButtonForm extends Form
             user_repo.removeClass "has-warning"
 
         if (user_repo.hasClass "has-error") or (user_repo.hasClass "has-warning")
-          options.user = "ntkme"
-          options.repo = "github-buttons"
+          options.user = "DimensionDataCBUSydney"
+          options.repo = "plumbery-contrib"
 
         if @cache isnt (cache = Hash.encode options) or force
           @cache = cache
@@ -184,51 +184,21 @@ class ButtonForm extends Form
   parse: (options = @serialize()) ->
     {type, user, repo} = options
     config =
-      className: "github-button"
+      className: "dimensiondata-button"
       href:
         switch type
-          when "follow"
-            "https://github.com/#{user}"
-          when "watch", "star"
+          when "deploy"
             "https://github.com/#{user}/#{repo}"
-          when "fork"
-            "https://github.com/#{user}/#{repo}/fork"
-          when "issue"
-            "https://github.com/#{user}/#{repo}/issues"
-          when "download"
-            "https://github.com/#{user}/#{repo}/archive/master.zip"
-          else
-            "https://github.com/"
       text:
         switch type
-          when "follow"
-            "Follow @#{user}"
-          else
-            type.charAt(0).toUpperCase() + type[1..].toLowerCase()
+          "Deploy to Dimension Data Cloud"
       data:
         icon:
-          switch type
-            when "watch"
-              "octicon-eye"
-            when "star"
-              "octicon-star"
-            when "fork"
-              "octicon-repo-forked"
-            when "issue"
-              "octicon-issue-opened"
-            when "download"
-              "octicon-cloud-download"
-            else
-              "octicon-mark-github"
+          "octicon-cloud-upload"
       aria:
         label:
           switch type
-            when "follow"
-              "Follow @#{user} on GitHub"
-            when "watch", "star", "fork", "issue", "download"
-              "#{type.charAt(0).toUpperCase() + type[1..].toLowerCase()} #{user}/#{repo} on GitHub"
-            else
-              "GitHub"
+            "Dimension Data Cloud"
     if options["large-button"]?
       config.data.style = "mega"
     if options["show-count"]?
@@ -252,7 +222,7 @@ class ButtonForm extends Form
         when "issue"
           config.data["count-api"] = "/repos/#{user}/#{repo}#open_issues_count"
           config.data["count-aria-label"] = "# issues on GitHub"
-    if options["standard-icon"]? or config.data.icon is "octicon-mark-github"
+    if options["standard-icon"]? or config.data.icon is "octicon-cloud-upload"
       delete config.data.icon
     config
 
